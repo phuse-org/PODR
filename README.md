@@ -1,6 +1,6 @@
 ![PHUSE PODR Logo Logo](PODR.jpeg)
 # PHUSE Open Data Repository ("PODR")
-PODR is powered by NIHPO’s Platform (http://nihpo.com)
+PODR is powered by [NIHPO’s Platform](http://nihpo.com)
 
 # Description
 

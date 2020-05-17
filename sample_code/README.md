@@ -16,5 +16,4 @@ Here you can find sample code to use the PODR platform.
 ## SAS
 
 
-
-Please feel free to contribute your own code snippets for other PHUSE members to use.
+Please contact [Jose C. Lacal](mailto:Jose.Lacal@NIHPO.com) if you'd like to contribute your own code snippets for other PHUSE members to use.

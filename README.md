@@ -1,7 +1,8 @@
 ![PHUSE PODR Logo Logo](PODR.jpeg)
-#PHUSE Open Data Repository ("PODR")
+# PHUSE Open Data Repository ("PODR")
+PODR is powered by NIHPO’s Platform (http://nihpo.com)
 
-##Description
+#Description
 
 One challenge when using Open Data is that the raw data distributed by sources comes in multiple formats (CSV, Excel, XML) and sometimes a single dataset has used different file layouts over the years.
 
@@ -19,25 +20,20 @@ NIHPO and PhUSE intend PODR to:
 Where PhUSE members will not need any IT involvement to use PODR.
 
 
-#Table of Contents
+# Table of Contents
 [Documentation](/documentation)
+
 [Sample Code](/sample_code)
+
 [Use Cases](/use_cases)
 
 
-Usage: The next section is usage, in which you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
+# Contributing
+Any contribution to this repository will be free to use by PHUSE members.
 
-#Contributing
-Any and all contributions 
-
-#Credits
+# Credits
 PODR is an instance of the NIHPO Platform [NIHPO](http://nihpo.com).
 The NIHPO Platform integrates health-related Open Data across agencies, within departments of each relevant agency, and across countries. The NIHPO Platform gives users a single interface to search across all available datasets.
 
-#License
-All Intellectual Property Rights, including copyright and trade secrets (“IPRs”), related to both PODR and the underlying NIHPO Platform belong solely to NIHPO. Including, but not limited to:
-* NIHPO’s software
-* Data processing and deployment processes and tools
-* NIHPO’s Enriched Open Data
-* Manuals and documentation
-* Webinars and any training sessions delivered by NIHPO staffers
+# License
+Materials posted in this repository are free to use with proper credit to the materials' author.

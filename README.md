@@ -2,7 +2,7 @@
 # PHUSE Open Data Repository ("PODR")
 PODR is powered by NIHPO’s Platform (http://nihpo.com)
 
-#Description
+# Description
 
 One challenge when using Open Data is that the raw data distributed by sources comes in multiple formats (CSV, Excel, XML) and sometimes a single dataset has used different file layouts over the years.
 
@@ -33,6 +33,7 @@ Any contribution to this repository will be free to use by PHUSE members.
 
 # Credits
 PODR is an instance of the NIHPO Platform [NIHPO](http://nihpo.com).
+
 The NIHPO Platform integrates health-related Open Data across agencies, within departments of each relevant agency, and across countries. The NIHPO Platform gives users a single interface to search across all available datasets.
 
 # License

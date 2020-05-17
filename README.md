@@ -25,7 +25,7 @@ Where PhUSE members will not need any IT involvement to use PODR.
 This is the presentation delivered during the [launch webinar](/NIHPO_PHUSE_Launch_04.pdf)  on 08 May 2020.
 
 And this presentation outlines the concept of PHUSE as a "Glass Building" where members and other stakeholders come together in a spirit of total transparency.
-[PHUSE as a Glass Building] (/NIHPO_PHUSE_GlassBuilding.pdf)
+[PHUSE as a Glass Building](/NIHPO_PHUSE_GlassBuilding.pdf)
 
 
 # Table of Contents
@@ -43,7 +43,7 @@ Here you can find relevant documents:
 Any contribution to this repository will be free to use by PHUSE members.
 
 # Credits
-PODR is an instance of the NIHPO Platform [NIHPO](http://nihpo.com)
+PODR is an instance of the [NIHPO Platform](http://nihpo.com)
 
 The NIHPO Platform integrates health-related Open Data across agencies, within departments of each relevant agency, and across countries. The NIHPO Platform gives users a single interface to search across all available datasets.
 

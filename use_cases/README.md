@@ -1,5 +1,5 @@
 ![PHUSE PODR Logo Logo](/PODR.jpeg)
-# PHUSE - Process of Analysis
+# PODR - Use Cases
 
 [17 May 2020]
 
@@ -15,4 +15,4 @@ This is the process we're using to discover their needs:
 
 ![Decisions to Data](Decisions_to_Data.png)
 
-The final [Use Cases](/use_cases) are available for your feedback.
+The final Use Cases are available for your feedback.

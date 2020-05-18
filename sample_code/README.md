@@ -1,7 +1,7 @@
 ![PHUSE PODR Logo Logo](/PODR.jpeg)
 # PODR - Sample Code
 
-Here you can find sample code to use the PODR platform.
+Here you can find sample code to use with the PODR platform.
 
 ## C
 
@@ -10,6 +10,7 @@ Here you can find sample code to use the PODR platform.
 ## Java
 
 ## Python
+[Python sample](/sample_code/PHUSE_PODR.py)
 
 ## R
 

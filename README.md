@@ -10,14 +10,15 @@ A second challenge with using Open Data is the need for users to integrate all t
 
 PODR integrates health-related Open Data across agencies, within departments of each relevant agency, and across countries. PODR gives users a single interface to search across all available datasets.
 
-NIHPO and PhUSE intend PODR to:
-* Increase PhUSE member engagement with PhUSE’s Working Groups and events.
+NIHPO and PHUSE intend PODR to:
+* Increase PHUSE member engagement with PHUSE’s Working Groups and events.
 * Eliminate user’s time-consuming “Data Prep” process of loading and massaging raw data. “From Zero to Analysis” in under five minutes.
-* Accelerate discovery of solutions to data-centric challenges posed by PhUSE sponsors, members.
-* Make it easier for PhUSE members to learn new tools and technologies (Jupyter, Python, R).
-* Give each PhUSE member the opportunity to quickly launch new projects and collaborative research projects with other members.
-* Make data analytics accessible to all levels of users, from Excel users to power users.
-Where PhUSE members will not need any IT involvement to use PODR.
+* Accelerate discovery of solutions to data-centric challenges posed by PHUSE sponsors, members.
+* Make it easier for PHUSE members to learn new tools and technologies (Jupyter, Python, R).
+* Give each PHUSE member the opportunity to quickly launch new projects and collaborative research projects with other members.
+* Make data analytics accessible to all levels of users, from Excel users to power users. 
+
+And where PHUSE members will not need any IT involvement to use PODR.
 
 
 # Background

@@ -1,9 +1,12 @@
 # (c) 2007-2020 NIHPO, Inc.
+# Jose.Lacal@NIHPO.com - 18 May 2020
+#
 """
 Purpose:
 * This sample Python code connects with PODR and conducts a couple of queries.
+* Please keep in mind that you are only allowed 01 connection at the time to PODR's database.
 
-Please contact Jose.Lacal@NIHPO.com to request a Username and Password to access PODR.
+If you are a PHUSE member: please contact Jose.Lacal@NIHPO.com to request a Username and Password to access PODR.
 
 Requirements:
 * Python 3.6+
@@ -12,11 +15,16 @@ Requirements:
 	"PHUSE_User"
 	"PHUSE_Password"
 
+
 To set environment variables:
 
 In macOS:
 	Open Terminal.
+	export PHUSE_User="your assigned username here"
+	export PHUSE_Password="your assigned password here"
 
+In Windows:
+	https://www.techjunkie.com/environment-variables-windows-10/
 """
 # - - - - -
 # Imports Section
@@ -33,13 +41,13 @@ except ImportError:
 try:
 	pgsql_user = os.environ["PHUSE_User"]
 except KeyError: 
-	print "Please set the environment variable PHUSE_User"
+	print ("Please set the environment variable 'PHUSE_User'")
 	sys.exit(1)
 #
 try:
 	pgsql_password = os.environ["PHUSE_Password"]
 except KeyError: 
-	print "Please set the environment variable PHUSE_Password"
+	print ("Please set the environment variable 'PHUSE_Password'")
 	sys.exit(1)
 #
 pgsql_dbname = "nihpo"
@@ -49,7 +57,7 @@ pgsql_port = 5432
 # = = = Main Processing = = =
 if __name__ == "__main__":
 	#
-	print ("Starting..")
+	print ("Starting..\n")
 	#
 	## Open database connection:
 	try:
@@ -65,11 +73,24 @@ if __name__ == "__main__":
 		print ("dbname='%s' user='%s' password='%s' host='%s' port='%s'" % (pgsql_dbname, pgsql_user, pgsql_password, pgsql_host, pgsql_port))
 		sys.exit('I am unable to connect to PODR - PostgreSQL.')
 	#
-
-
-
-
-	con_nihpo_target.commit()
+	#
+	# = = = Sample queries below = = =
+	#
+	# 01. List all available tables:
+	cur.execute("""SELECT table_name FROM information_schema.tables WHERE table_schema = 'public'""")
+	print ("\n\nList of all available tables in PODR:")
+	for table in cur.fetchall():
+		print(table)
+	#
+	# 02. List 10 FDA Adverse Events for drug "IMURAN":
+	cur.execute("""SELECT * FROM nihpo_fda_aers_drug WHERE drugname = 'IMURAN' LIMIT 10;""")
+	print ("\n\n10 Adverse Events from FDA's AERS, table 'nihpo_fda_aers_drug':")
+	for adverse_event in cur.fetchall():
+		print(adverse_event)
+	#
+	#
+	# = = = The end = = =
+	#
 	con_nihpo_target.close()
-	print ("\nDisconnected from PostgreSQL database :: [%s]" % (pgsql_dbname))
+	print ("\n\nYou disconnected from the PHUSE PODR database.")
 	#

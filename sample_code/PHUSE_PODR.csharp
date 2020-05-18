@@ -1,0 +1,73 @@
+// (c) 2007-2020 NIHPO, Inc.
+// Jose.Lacal@NIHPO.com - 18 May 2020
+// 
+// >> NOT tested yet. <<
+//
+// References: 
+//	https://medium.com/@agavatar/webapi-with-net-core-and-postgres-in-visual-studio-code-8b3587d12823
+//	http://www.npgsql.org/
+/*
+Purpose:
+* This sample C# code connects with PODR and conducts a couple of queries.
+* Please keep in mind that you are only allowed 01 connection at the time to PODR's database.
+
+If you are a PHUSE member: please contact Jose.Lacal@NIHPO.com to request a Username and Password to access PODR.
+
+Requirements:
+* .NET Core [https://dotnet.microsoft.com/download]
+* You must have these environment variables defined with the access details provided to you.
+	"PHUSE_User"
+	"PHUSE_Password"
+
+
+To set environment variables:
+
+In macOS:
+	Open Terminal.
+	export PHUSE_User="your assigned username here"
+	export PHUSE_Password="your assigned password here"
+
+In Windows:
+	https://www.techjunkie.com/environment-variables-windows-10/
+*/
+//
+// Install: Npgsql --version 4.1.3.1
+// dotnet add package Npgsql --version 4.1.3.1
+//
+using System;
+using Npgsql;
+#
+Console.WriteLine"Starting..");
+//
+string pgsql_user = Environment.GetEnvironmentVariable("PHUSE_User");
+string pgsql_password = Environment.GetEnvironmentVariable("PHUSE_Password");
+string pgsql_dbname = "nihpo";
+string pgsql_host = "podr.phuse.global";
+string pgsql_port = 5432;
+//
+var connString = "Host=pgsql_hos;Username=pgsql_user;Password=pgsql_password;Database=pgsql_dbname";
+//
+await using var conn = new NpgsqlConnection(connString);
+await conn.OpenAsync();
+//
+// = = = Sample queries below = = =
+//
+// 01. List all available tables:
+await using (var cmd = new NpgsqlCommand("SELECT table_name FROM information_schema.tables WHERE table_schema = 'public';", conn));
+Console.WriteLine("List of all available tables in PODR:");
+await using (var reader = await cmd.ExecuteReaderAsync())
+    while (await reader.ReadAsync())
+        Console.WriteLine(reader.GetString(0));
+//
+// 02. List 10 FDA Adverse Events for drug "IMURAN":
+await using (var cmd = new NpgsqlCommand("SELECT * FROM nihpo_fda_aers_drug WHERE drugname = 'IMURAN' LIMIT 10;", conn));
+Console.WriteLine("10 Adverse Events from FDA's AERS, table 'nihpo_fda_aers_drug':");
+await using (var reader = await cmd.ExecuteReaderAsync())
+    while (await reader.ReadAsync())
+        Console.WriteLine(reader.GetString(0));
+//
+// = = = The end = = =
+//
+	con_nihpo_target.close()
+
+Console.WriteLine("You disconnected from the PHUSE PODR database.");

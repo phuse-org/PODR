@@ -4,7 +4,7 @@ PODR is powered by [NIHPO’s Platform](http://nihpo.com)
 
 # Description
 
-One challenge when using Open Data is that the raw data distributed by sources comes in multiple formats (CSV, Excel, XML) and sometimes a single dataset has used different file layouts over the years.
+One challenge when using Open Data is that the raw data distributed by academic and government sources comes in multiple formats (CSV, Excel, XML). And sometimes a single dataset has used different file layouts over the years.
 
 A second challenge with using Open Data is the need for users to integrate all those disparate datasets from multiple sources into an easy-to-search system.
 

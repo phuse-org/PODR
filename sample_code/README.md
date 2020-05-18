@@ -6,6 +6,7 @@ Here you can find sample code to use with the PODR platform.
 ## C
 
 ## C#
+[C# sample - NOT finished yet.](/sample_code/PHUSE_PODR.csharp)
 
 ## Java
 

@@ -30,7 +30,8 @@ In Windows:
 Process:
 a.) Set environment variables.
 b.) Compile this file: 
-	javac -classpath ".:postgresql-42.2.11.jar" PHUSE_PODR.java
+	javac -classpath postgresql-42.2.11.jar PHUSE_PODR.java
+c.) run file:
 	java -cp postgresql-42.2.11.jar:<Your local directory> PHUSE_PODR
 
 */

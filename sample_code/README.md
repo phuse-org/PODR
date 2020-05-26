@@ -9,9 +9,10 @@ Here you can find sample code to use with the PODR platform.
 [C# sample - NOT finished yet.](/sample_code/PHUSE_PODR.csharp)
 
 ## Java
+[Java sample](/sample_code/PHUSE_PODR.java)
 
 ## Python
-[Python sample](/sample_code/PHUSE_PODR.py)
+[Python3 sample](/sample_code/PHUSE_PODR.py)
 
 ## R
 

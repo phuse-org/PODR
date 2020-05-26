@@ -1,9 +1,9 @@
 # (c) 2007-2020 NIHPO, Inc.
-# Jose.Lacal@NIHPO.com - 18 May 2020
+# Jose.Lacal@NIHPO.com - 26 May 2020
 #
 """
 Purpose:
-* This sample Python code connects with PODR and conducts a couple of queries.
+* This sample Python code connects with PHUSE's Open Data Repository ("PODR") and runs a couple of queries.
 * Please keep in mind that you are only allowed 01 connection at the time to PODR's database.
 
 If you are a PHUSE member: please contact Jose.Lacal@NIHPO.com to request a Username and Password to access PODR.
@@ -25,6 +25,12 @@ In macOS:
 
 In Windows:
 	https://www.techjunkie.com/environment-variables-windows-10/
+
+
+Process:
+a.) Set environment variables.
+b.) Run this script:
+	python3 PHUSE_PODR.py
 """
 # - - - - -
 # Imports Section
@@ -37,7 +43,7 @@ except ImportError:
 	print ("sudo pip3 install psycopg2-binary")
 	sys.exit()
 #
-# PostgreSQL:
+# Check for PostgreSQL's username and password in your environment:
 try:
 	pgsql_user = os.environ["PHUSE_User"]
 except KeyError: 
@@ -71,7 +77,7 @@ if __name__ == "__main__":
 	except psycopg2.DatabaseError as e:
 		print ("PostgreSQL error %s" % e)
 		print ("dbname='%s' user='%s' password='%s' host='%s' port='%s'" % (pgsql_dbname, pgsql_user, pgsql_password, pgsql_host, pgsql_port))
-		sys.exit('I am unable to connect to PODR - PostgreSQL.')
+		sys.exit("There was an error connecting to PHUSE's Open Data Repository.")
 	#
 	#
 	# = = = Sample queries below = = =
@@ -83,7 +89,7 @@ if __name__ == "__main__":
 		print(table)
 	#
 	# 02. List 10 FDA Adverse Events for drug "IMURAN":
-	cur.execute("""SELECT * FROM nihpo_fda_aers_drug WHERE drugname = 'IMURAN' LIMIT 10;""")
+	cur.execute("""SELECT caseid, cum_dose_chr, cum_dose_unit, dechal, dose_amt, dose_form, dose_freq, dose_unit, dose_vbm, drug_seq, drugname, exp_dt, lot_num, nda_num, primaryid, prod_ai, rechal, role_cod, route, val_vbm FROM nihpo_fda_aers_drug WHERE drugname = 'IMURAN' LIMIT 10;""")
 	print ("\n\n10 Adverse Events from FDA's AERS, table 'nihpo_fda_aers_drug':")
 	for adverse_event in cur.fetchall():
 		print(adverse_event)

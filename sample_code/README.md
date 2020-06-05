@@ -19,8 +19,12 @@ Here you can find sample code to use with the PODR platform.
 ## SAS
 
 ## CDISC ADaM
+These files contain Synthetic Data that matches the specifications of CDISC's ADaM format:
+
 [Synthetic Data for 10 subjects](/sample_code/ADaM_SyntData_10.csv)
+
 [Synthetic Data for 100 subjects](/sample_code/ADaM_SyntData_100.csv)
+
 [Synthetic Data for 300 subjects](/sample_code/ADaM_SyntData_300.csv)
 
 Please contact [Jose C. Lacal](mailto:Jose.Lacal@NIHPO.com) if you'd like to contribute your own code snippets for other PHUSE members to use.

@@ -81,7 +81,7 @@ C124296 | "Subject Trial Status" | 03
 
 Files generated:
 * ADSL: 01 record per Subject.
-* ADAE: 01 record if Subject suffers and Adverse Event.
+* ADAE: 01 record if Subject suffers an Adverse Event.
 * ADLB: 01 record per subject per parameter per analysis visit per analysis date.
 * ADHY: 01 record per subject per parameter per analysis visit per analysis date.
 * ADSAFTTE: 01 record per subject per parameter per analysis visit per analysis date.
@@ -92,19 +92,21 @@ Pending Work:
 
 
 
+
 Open Questions
 
 01. Do I need to generate a "Baseline" record for each Subject? Including (random) starting values for all Parameters addressed in each Analysis.
 Then, during each Visit, Parameters are randomly generated for the visit and compared against the Baseline.
 
-02. Create an in-memory dictionary:
-Dates
-* Enrollment
-* Each Visit
-* Date results are available
-* Relative Day (since start of participation)
+Create an in-memory dictionary:
+	Dates
+		* Enrollment
+		* Each Visit
+		* Date results are available
+		* Relative Day (since start of participation)
 
-Parameter:
-* Baseline value
-* Measure (each Visit)
-* Compare measure with Baseline
+	Parameter:
+		* Baseline value
+		* Measure (each Visit)
+		* Compare measure with Baseline
+

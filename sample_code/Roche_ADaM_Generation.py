@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-# (c) 2007-2020 NIHPO, ,Inc.   http://NIHPO.com   Contact: Jose.Lacal@NIHPO.com
+# (c) 2007-2020 NIHPO, Inc.   http://NIHPO.com   Contact: Jose.Lacal@NIHPO.com
 # Filename: Roche_ADaM_Generation.py
-# Purpose: This Python script generates realistic yet fake ADaM data using Roche's sample spreadsheet.
+# Purpose: This Python script generates realistic yet fake CDISC ADaM data using Roche's sample spreadsheet.
 # Version: Tue 07 July 2020.
 #
 # This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 3.
@@ -401,6 +401,13 @@ var_output_file_ADSAFTTE.writerow([const_header_02])
 var_output_file_ADSAFTTE.writerow(["# Dataset: ADSAFTTE", "Description: Safety Time to Event Analysis Dataset"])
 var_output_file_ADSAFTTE.writerow(['STUDYID','USUBJID','SUBJID','SITEID','ASEQ','REGION1','COUNTRY','ETHNIC','AGE','AGEU','AAGE','AAGEU','AGEGR1','AGEGR2','AGEGR3','STRATwNM','STRATw','STRATwV','SEX','RACE','ITTFL','SAFFL','PPROTFL','TRT01P','TRTxxP','TRT01A','TRTxxA','TRTSEQP','TRTSEQA','TRTSDTM','TRTSDT','TRTEDTM','TRTEDT','DCUTDT','PARAM','PARAMCD','PARCAT1','AVAL','AVALU','STARTDT','STARTDTF','ADT','ADY','ADTF','CNSR','EVNTDESC','CNSDTDSC','SRCDOM','SRCVAR','SRCSEQ','ANL01FL'])
 #
+
+
+# = = NOTICE = =
+# Fields where the content looks like this "-DMDTC-" (with a starting and an ending dash '-') still need processing.
+# = =
+
+
 #
 # Global Counters:
 var_subject_counter = 1
@@ -611,10 +618,31 @@ while var_subject_counter <= CT_NUMBER_SUBJECTS:
 
 
 
-	# NOTE:
+	# = = NOTE = =
 	# The following 03 files (ADLB; ADHY; and ADSAFTTE) contain records that are generated as follows:
 	# 		One record per subject per parameter per analysis visit per analysis date.
 	# 		_x000D_ SDTM variables are populated on new records coming from other single records.  Otherwise, SDTM variables are left blank.
+
+
+	"""
+	[Tue 07 July 2020]
+	I probably need to generate a "Baseline" record for each Subject.
+	Including (random) starting values for all Parameters addressed in each Analysis.
+	Then, during each Visit, Parameters are randomly generated for the visit and compared against the Baseline.
+
+	Create an in-memory dictionary:
+		Dates
+			* Enrollment
+			* Each Visit
+			* Date results are available
+			* Relative Day (since start of participation)
+
+		Parameter:
+			* Baseline value
+			* Measure (each Visit)
+			* Compare measure with Baseline
+	"""
+
 	#
 	# = = Process Visit = =
 	var_number_visits = len(CT_VISIT_ANALYSIS_PARAMETER['visits'])

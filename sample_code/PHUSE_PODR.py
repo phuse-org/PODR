@@ -1,5 +1,7 @@
 # (c) 2007-2020 NIHPO, Inc.
-# Jose.Lacal@NIHPO.com - 26 May 2020
+# Jose.Lacal@NIHPO.com - 21 September 2020
+#
+# License notice: Please notice that PODR is provided to PHUSE members for non-commercial use only.
 #
 """
 Purpose:
@@ -9,11 +11,13 @@ Purpose:
 If you are a PHUSE member: please contact Jose.Lacal@NIHPO.com to request a Username and Password to access PODR.
 
 Requirements:
+* !! Make sure your computer is NOT behind a corporate firewall. You need to be able to access port 5432 on the PODR database.
 * Python 3.6+
 * psycopg2-binary
 * You must have these environment variables defined with the access details provided to you.
 	"PHUSE_User"
 	"PHUSE_Password"
+* Alternatively, if you do not have admin rights on your computer: please embed the username and password values below.
 
 
 To set environment variables:
@@ -47,14 +51,12 @@ except ImportError:
 try:
 	pgsql_user = os.environ["PHUSE_User"]
 except KeyError: 
-	print ("Please set the environment variable 'PHUSE_User'")
-	sys.exit(1)
+	pgsql_user = "<Enter username value provided to you>"
 #
 try:
 	pgsql_password = os.environ["PHUSE_Password"]
 except KeyError: 
-	print ("Please set the environment variable 'PHUSE_Password'")
-	sys.exit(1)
+	pgsql_password = "<Enter password value provided to you>"
 #
 pgsql_dbname = "nihpo"
 pgsql_host = "podr.phuse.global"
@@ -63,7 +65,7 @@ pgsql_port = 5432
 # = = = Main Processing = = =
 if __name__ == "__main__":
 	#
-	print ("Starting..\n")
+	print ("Starting..\nLicense notice: Please notice that PODR is provided to PHUSE members for non-commercial use only.\n")
 	#
 	## Open database connection:
 	try:
@@ -75,8 +77,9 @@ if __name__ == "__main__":
 		print ("At host [%s] with port [%d]\n" % (pgsql_host, pgsql_port))
 		#
 	except psycopg2.DatabaseError as e:
-		print ("PostgreSQL error %s" % e)
+		print ("\nPostgreSQL error %s" % e)
 		print ("dbname='%s' user='%s' password='%s' host='%s' port='%s'" % (pgsql_dbname, pgsql_user, pgsql_password, pgsql_host, pgsql_port))
+		print("\nMake sure your computer is NOT behind a corporate firewall.\nYou need to be able to access port 5432 on the PODR database.")
 		sys.exit("There was an error connecting to PHUSE's Open Data Repository.")
 	#
 	#

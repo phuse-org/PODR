@@ -9,6 +9,32 @@
 # You should have received a copy of the GNU General Public License along with this program.  If not, see https://www.gnu.org/licenses/gpl-3.0.html
 #
 # From the SDTM Implementation Guide v 3.3 Final, pages 361 and forward:
+
+
+"""
+[Fri 10/09/2020]
+* Focus on delivering data files (AE).
+* Priority:
+	AE
+	DM
+	EX
+	LB
+
+
+Selected domains:
+	AE
+	CM
+	DM
+	DS
+	EX
+	LB
+	MH
+	TA
+	TS
+	TV
+	VS
+"""
+
 CT_TA_EXAMPLE_TRIAL = 1
 # Avaailable Trial Design Matrix examples: 1; 2; 3
 #
@@ -123,6 +149,12 @@ Pending [Thu 10/08/2020]
 Possible parameters:
 	Time unit [hour | day | week | month] after [start | end] Epoch.
 	Time unit [hour | day | week | month] after [start | end] Visit.
+
+
+[Fri 10/09/2020]
+a.) "Planned" events vs. "Actual" timing of events. What gets reported?
+b.) Reference timing variables stored in data model.
+c.) Schedule of Assessments.
 """
 #
 #

@@ -2,7 +2,7 @@
 # (c) 2007-2020 NIHPO, Inc.   http://NIHPO.com   Contact: Jose.Lacal@NIHPO.com
 # Filename: Roche_ADaM_Generation.py
 # Purpose: This Python script generates realistic yet fake CDISC ADaM data using Roche's sample spreadsheet.
-# Version: Tue 07 July 2020.
+# Version: Thu 24 September 2020.
 #
 # This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 3.
 # This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
@@ -220,7 +220,7 @@ const_header_01 = """# (c) 2007-2020 NIHPO, Inc. - http://NIHPO.com   Licensed t
 # This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details."
 # You should have received a copy of the GNU General Public License along with this program.  If not, see https://www.gnu.org/licenses/gpl-3.0.html"
 # WARNING: This information is completely fake. Values such as Age and Gender are randomly assigned using a Weighted Random Generator."
-# CREDIT: The specific fields used in this file are defined by a sample 'Analysis Dataset Programming Specification' Excel file generously provided by Roche."""
+# CREDIT: The specific fields used in this file are defined by a sample 'Analysis Dataset Programming Specification' Excel file generously provided by Roche.,,,"""
 const_header_02 = """# This file was generated using the following parameters:
 # 	Number of subjects: %d. Study ID: %s
 # 	Minimum age: %d; Maximum age: %d
@@ -235,7 +235,7 @@ const_header_02 = """# This file was generated using the following parameters:
 #		NOT REPORTED = %d
 #		UNKNOWN = %d
 # 	Percentage of 'Hispanic' race: %d
-# 	The CSV separator is %s  """ % (CT_NUMBER_SUBJECTS, CT_STUDY_ID, CT_AGE_MINIMUM, CT_AGE_MAXIMUM, CT_DATE_START_RECRUITMENT, CT_DATE_CURRENT_DATE, CT_FEMALE_SPLIT, CT_RACE_SPLIT_AMERICAN_INDIAN, CT_RACE_SPLIT_ASIAN, CT_RACE_SPLIT_BLACK, CT_RACE_SPLIT_NATIVE_HAWAIIAN, CT_RACE_SPLIT_WHITE, CT_RACE_SPLIT_NOT_REPORTED, CT_RACE_SPLIT_UNKNOWN, CT_RACE_HISPANIC, CT_CSV_SEPARATOR)
+# 	The CSV separator is %s  ,,,""" % (CT_NUMBER_SUBJECTS, CT_STUDY_ID, CT_AGE_MINIMUM, CT_AGE_MAXIMUM, CT_DATE_START_RECRUITMENT, CT_DATE_CURRENT_DATE, CT_FEMALE_SPLIT, CT_RACE_SPLIT_AMERICAN_INDIAN, CT_RACE_SPLIT_ASIAN, CT_RACE_SPLIT_BLACK, CT_RACE_SPLIT_NATIVE_HAWAIIAN, CT_RACE_SPLIT_WHITE, CT_RACE_SPLIT_NOT_REPORTED, CT_RACE_SPLIT_UNKNOWN, CT_RACE_HISPANIC, CT_CSV_SEPARATOR)
 #
 # Open SQLite3 file:
 try:

@@ -36,7 +36,7 @@ Selected domains:
 """
 
 CT_TA_EXAMPLE_TRIAL = 1
-# Avaailable Trial Design Matrix examples: 1; 2; 3
+# Available Trial Design Matrix examples: 1; 2; 3
 #
 # Constants:
 CT_STUDYID = 'XYZ'

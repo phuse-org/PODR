@@ -1,3 +1,10 @@
 
 sample_code/.DS_Store
 .DS_Store
+
+
+
+#Rshiny podrr app
+sample_code/R/shiny/podrr/.Rproj.user/
+sample_code/R/shiny/podrr/.Rbuildignore
+sample_code/R/shiny/podrr/.Rhistory

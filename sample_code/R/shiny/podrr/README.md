@@ -1,4 +1,6 @@
 # Phuse Open Data Repository RShiny (PODRR)
+[Deployed app](https://amritsingh.shinyapps.io/PODRR/)
+
 
 ## R-Package download
 ![GIF](https://github.com/singha53/PODR/blob/master/sample_code/R/shiny/podrr/inst/extdata/walkthroughs/download_podrr.gif)

@@ -10,4 +10,4 @@
 
 ### [Power BI Desktop](https://powerbi.microsoft.com/en-us/downloads/)
 
-![powerbi](sample_code\powerbi\screenshots\powerbi_installation.PNG)
+![powerbi](https://github.com/singha53/PODR/blob/master/sample_code/powerbi/screenshots/powerbi_installation.PNG)

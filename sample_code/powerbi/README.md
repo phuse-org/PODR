@@ -19,3 +19,10 @@
 ### Check if R is installed
 
 ![R](https://github.com/singha53/PODR/blob/master/sample_code/powerbi/screenshots/check_r_version.gif)
+
+## Data import
+
+* connect to PHUSE Open Data Respository ([PODR](https://github.com/phuse-org/PODR/blob/master/documentation/power_bi/NIHPO_PHUSE_PowerBI.pdf)). Note: the walkthrough below doesn't require PODR credentials as they have previously been entered.
+
+![R](https://github.com/singha53/PODR/blob/master/sample_code/powerbi/screenshots/data_import.gif)
+

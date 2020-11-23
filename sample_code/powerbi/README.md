@@ -9,7 +9,7 @@ Details of the Beat19 study can be found on [here](https://clinicaltrials.gov/ct
 
 ## Required software
 * Microsoft PowerBI Desktop
-* R: required for [correlation coefficient visual](https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104380814?tab=Overview)
+* R: required for visualizing heatmap of correlation coefficients
 
 ### [Power BI Desktop](https://powerbi.microsoft.com/en-us/downloads/)
 

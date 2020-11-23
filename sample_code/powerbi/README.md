@@ -74,6 +74,6 @@ Details of the Beat19 study can be found on [here](https://clinicaltrials.gov/ct
 
 ![demo1](https://github.com/singha53/PODR/blob/master/sample_code/powerbi/screenshots/dashboard_demo1.gif)
 
-2. Visual correlation between symptoms based on age group per hospitalization group.
+2. Visualize correlation between symptoms based on age group per hospitalization group.
 
 ![demo2](https://github.com/singha53/PODR/blob/master/sample_code/powerbi/screenshots/dashboard_demo2.gif)

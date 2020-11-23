@@ -72,8 +72,8 @@ Details of the Beat19 study can be found on [here](https://clinicaltrials.gov/ct
 
 1. Explore hospitalization status by gender.
 
-![demo1](https://github.com/singha53/PODR/blob/master/sample_code/powerbi/screenshots/demo1.gif)
+![demo1](https://github.com/singha53/PODR/blob/master/sample_code/powerbi/screenshots/dashboard_demo1.gif)
 
 2. Visual correlation between symptoms based on age group per hospitalization group.
 
-![demo2](https://github.com/singha53/PODR/blob/master/sample_code/powerbi/screenshots/demo2.gif)
+![demo2](https://github.com/singha53/PODR/blob/master/sample_code/powerbi/screenshots/dashboard_demo2.gif)

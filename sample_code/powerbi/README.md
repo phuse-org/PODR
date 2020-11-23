@@ -1,6 +1,6 @@
 # POWER BI demonstration using Beat 19 COVID-19 data
 
-Details of the Beat19 can be found on [here]().
+Details of the Beat19 study can be found on [here](https://clinicaltrials.gov/ct2/show/NCT04321811).
 
 * [Required software](#required-software)
 * [Data import](#data-import)

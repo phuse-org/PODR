@@ -15,6 +15,11 @@ Here you can find sample code to use with the PODR platform.
 [Python3 sample](/sample_code/PHUSE_PODR.py)
 
 ## R
+Hanming Tu at Frontage Labs has created (November 2020) a R Shiny app for accessing PODR: 
+[Live demo][https://geotiger.shinyapps.io/01_podr/] {Please contact [Jose C. Lacal](mailto:Jose.Lacal@NIHPO.com) for a username and password.
+[CRAN package] [https://cran.rstudio.com/web/packages/podr/index.html] and available for everyone to download. 
+[About podr package] [https://cran.rstudio.com/web/packages/podr/vignettes/about-podr.html]
+
 
 ## SAS
 

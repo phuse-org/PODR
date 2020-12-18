@@ -12,6 +12,15 @@
 
 
 """
+[Wed 11 November 2020]
+
+To do:
+* Re-factor to use Pandas' DataFrames
+* Load variables from Excel file.
+
+
+
+
 [Fri 10/09/2020]
 * Focus on delivering data files (AE).
 * Priority:
